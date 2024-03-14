@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="neumorphism-card">
+  <h2>Payments</h2>
+
+    <div class="payments-container" id="paymentsContainer"></div>
+    <p>Total Money: $<span id="totalMoney"></span></p>
+
+    
+  </div>
+    <script src="script.js"></script>
+  <script>
+    // Display payments and total money
+    var paymentsContainer = document.getElementById('paymentsContainer');
+    var totalMoney = 0;
+    for (var i = 0; i < names.length; i++) {
+      var personName = names[i];
+      var transactionsKey = "person_" + personName.replace(/\s/g, '') + "_transactions";
+      var transactions = JSON.parse(localStorage.getItem(transactionsKey)) || [];
+      if (transactions.length > 0) {
+        // Display person box with transactions
+        var personBox = '<div class="person-box"><h3>' + personName + '</h3>';
+        personBox += '<div class="transactions-details">';
+        transactions.forEach(function(transaction) {
+          personBox += '<div class="transaction"><p>Date: ' + transaction.date + '</p><p>Amount: $'
+             + transaction.amount.toLocaleString() + '</p><p>Transaction ID: ' 
+            + transaction.transactionId + '</p></div>';
+          totalMoney += transaction.amount;
+        });
+        personBox += '</div></div>';
+        paymentsContainer.insertAdjacentHTML('beforeend', personBox);
+      }
+    }
+    document.getElementById('totalMoney').textContent = totalMoney.toLocaleString();
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+  const total = localStorage.getItem('totalMoney') || '0';
+  document.getElementById('totalMoneyText').textContent = `Total Money: ${total}`;
+});
+
+
+  </script>
+</body>
+</html>

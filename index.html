@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Money</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body{
+      background-color: lightgray;
+    }
+
+ 
+  </style>
+</head>
+<body>
+  <div class="container neumorphism-card">
+    <h2>Add Money</h2>
+    <div class="buttons-container">
+      <!-- 11 buttons -->
+      <button class="addMoneyBtn" onclick="openModal('Abiy Teklearegay')">Abiy Teklearegay</button>
+      <button class="addMoneyBtn" onclick="openModal('Alemayehu Tamire')">Alemayehu Tamire</button>
+      <button class="addMoneyBtn" onclick="openModal('Aychew Fekede')">Aychew Fekede</button>
+      <button class="addMoneyBtn" onclick="openModal('Dr.Dejene Haylu')">Dr.Dejene Haylu</button>
+      <button class="addMoneyBtn" onclick="openModal('Gezahegn Gutema')">Gezahegn Gutema</button>
+      <button class="addMoneyBtn" onclick="openModal('Mekonen Kebede')">Mekonen Kebede</button>
+      <button class="addMoneyBtn" onclick="openModal('Samuel Lema')">Samuel Lema</button>
+      <button class="addMoneyBtn" onclick="openModal('Samuel Tadesse')">Samuel Tadesse</button>
+      <button class="addMoneyBtn" onclick="openModal('Seife Gezahegn')">Seife Gezahegn</button>
+      <button class="addMoneyBtn" onclick="openModal('Thomas Getahun')">Thomas Getahun</button>
+      <button class="addMoneyBtn" onclick="openModal('Weliyou Nasir')">Weliyou Nasir</button>
+      
+    </div>
+    
+    <button  onclick="openModal('interest')">Interest</button>
+    <button onclick="goToPayments()" class="pay">Go to Payments</button>
+    <button onclick="findNonPayers()" class="non">Find Non-Payers</button>
+
+
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <form id="moneyForm">
+        <h3>Add Money</h3>
+        <p>Enter additional amount:</p>
+        <input type="number" id="amount" name="amount" required step="any" >
+        <p>Enter transaction ID:</p>
+        <input type="text" id="transactionId" name="transactionId" required>
+        <input type="hidden" id="personName" name="personName">
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</html>

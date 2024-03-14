@@ -1,0 +1,71 @@
+
+.person-box {
+    border: 1px solid #595896;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+  }
+  
+  .person-box h3 {
+    margin: 0 0 10px;
+  }
+  
+  .transactions-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .transaction {
+    border: 1px solid  #595896;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 200px; /* Adjust width as needed */
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .neumorphism-card {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #b9b9b9,
+                -5px -5px 15px #ffffff;
+    padding: 20px;
+    margin: 0px;
+  }
+  
+  .neumorphism-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .payments-container {
+    margin-bottom: 20px;
+  }
+  
+  .payments-container .person-box {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px #b9b9b9,
+                -3px -3px 8px #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .payments-container .person-box h3 {
+    margin-top: 0;
+  }
+  
+  .payments-container .transaction {
+    margin-bottom: 10px;
+  }
+  
+  #totalMoney {
+    font-weight: bold;
+  }
+      
